@@ -10,7 +10,15 @@ class Spark:
         self.spark_properties = spark_properties
         self.project_name = project_name
 
+    def get_spark(self):
+        return self.spark
 
-def get_json():
-    config = json.loads('../config/config.json')
-    return config
+
+class StorageUtil:
+    def __init__(self, project_name: str):
+        self.project_name = project_name
+
+    def get_json(self, path: str):
+        with open(path, 'r') as j:
+            contents = json.loads(j.read())
+        return contents
