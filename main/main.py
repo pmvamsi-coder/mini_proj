@@ -10,7 +10,8 @@ class Ingestion:
         self.spark = Spark(self.cfg.session_name, self.cfg.spark_properties, self.cfg.project_name).spark
 
     def process(self):
-        self.spark.read.option('header', 'true').csv(self.cfg.raw_file_path).show()
+        # self.spark.read.option('header', 'true').csv(self.cfg.raw_file_path).show()
+        self.spark.read.format(self.cfg.gcs_file_format).load(self.cfg.gcs_file_path).show()
         for i in self.spark.sparkContext.getConf().getAll():
             print(i)
         self.spark.stop()

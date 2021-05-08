@@ -5,5 +5,7 @@
   },
   "session_name": "vamsi",
   "project_name": "PMV",
-  "raw_file_path": "/Users/vamsi/Desktop/data/flight-time.csv"
+  "raw_file_path": "/Users/vamsi/Desktop/data/flight-time.csv",
+  "gcs_file_path": "data-112/2020-04-21/flight-time.parquet",
+  "gcs_file_format": "parquet"
 }

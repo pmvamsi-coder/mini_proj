@@ -10,3 +10,5 @@ class Config:
         self.project_name = data['project_name']
         self.spark_properties = data['spark_properties']
         self.raw_file_path = data['raw_file_path']
+        self.gcs_file_path = data['gcs_file_path']
+        self.gcs_file_format = data['gcs_file_format']
